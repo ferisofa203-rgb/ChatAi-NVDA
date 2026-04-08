@@ -1,0 +1,8 @@
+{
+  "version": "0.1.0",
+  "downloadUrl": "https://www.dropbox.com/scl/fi/ishjkro6xitxw9567146v/ChatAI-0.1.0.nvda-addon?rlkey=ha56qcsqossdqudtuikzksc8t&st=ny6kp6yi&dl=1",
+  "changelog": "Initial public release.",
+  "homepage": "https://github.com/ferisofa203-rgb/ChatAi-NVDA",
+  "minNVDAVersion": "2024.3",
+  "lastTestedNVDAVersion": "2025.1"
+}
