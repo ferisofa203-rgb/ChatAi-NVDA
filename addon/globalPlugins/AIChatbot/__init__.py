@@ -8,6 +8,7 @@ import wx
 
 from .config import initializeConfig
 from .dialogs import ChatDialog
+from .updateChecker import checkForUpdates
 from .settings import AIChatSettingsPanel
 
 addonHandler.initTranslation()
@@ -20,6 +21,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         initializeConfig()
         self.chatDialog = None
         self.chatAISettingsMenuItem = None
+        wx.CallLater(30000, lambda: checkForUpdates(manual=False))
 
         # Register settings panel
         try:
