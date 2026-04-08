@@ -13,7 +13,7 @@ class ChatDialog(wx.Dialog):
     def __init__(self, parent):
         super(ChatDialog, self).__init__(
             parent,
-            title="AI Chat",
+            title="Chat AI",
             size=(600, 500)
         )
 
@@ -24,6 +24,7 @@ class ChatDialog(wx.Dialog):
         self.buildUI()
         self.Bind(wx.EVT_SHOW, self.onShow)
         self.Centre()
+        wx.CallAfter(self.setInitialFocus)
 
     def buildUI(self):
         mainSizer = wx.BoxSizer(wx.VERTICAL)
@@ -72,12 +73,13 @@ class ChatDialog(wx.Dialog):
 
     def onShow(self, event):
         if event.IsShown():
-            wx.CallAfter(self.inputBox.SetFocus)
+            wx.CallAfter(self.setInitialFocus)
         event.Skip()
 
-    # =========================
-    # KEY HANDLER (FIX ENTER)
-    # =========================
+    def setInitialFocus(self):
+        self.inputBox.SetFocus()
+        self.inputBox.SetInsertionPointEnd()
+
     def onInputKeyDown(self, event):
         keyCode = event.GetKeyCode()
 
@@ -90,10 +92,6 @@ class ChatDialog(wx.Dialog):
             return
 
         event.Skip()
-
-    # =========================
-    # CORE LOGIC
-    # =========================
 
     def onSend(self, event):
         if self.isBusy:
@@ -150,15 +148,11 @@ class ChatDialog(wx.Dialog):
 
         self.isBusy = False
         self.sendButton.Enable()
-        self.inputBox.SetFocus()
+        self.setInitialFocus()
 
-    # =========================
-    # HISTORY FIX (NO BLANK LINE)
-    # =========================
     def appendToHistory(self, speaker, text):
         text = text.replace("\r\n", "\n").replace("\r", "\n")
 
-        # HAPUS SEMUA LINE KOSONG
         lines = [line for line in text.split("\n") if line.strip() != ""]
         cleanText = "\n".join(lines).strip()
 
@@ -174,10 +168,6 @@ class ChatDialog(wx.Dialog):
         self.historyBox.SetValue(newText)
         self.historyBox.SetInsertionPointEnd()
         self.historyBox.ShowPosition(self.historyBox.GetLastPosition())
-
-    # =========================
-    # UI ACTIONS
-    # =========================
 
     def onCopy(self, event):
         if not self.lastResponse:
@@ -196,7 +186,7 @@ class ChatDialog(wx.Dialog):
         self.lastResponse = ""
         self.historyBox.SetValue("")
         ui.message("Chat cleared.")
-        self.inputBox.SetFocus()
+        self.setInitialFocus()
 
     def onClose(self, event):
         self.Destroy()

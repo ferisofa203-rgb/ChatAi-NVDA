@@ -1,6 +1,8 @@
 # -*- coding: UTF-8 -*-
 
 import wx
+import webbrowser
+import ui
 from gui import settingsDialogs
 
 from .config import (
@@ -89,6 +91,9 @@ class AIChatSettingsPanel(settingsDialogs.SettingsPanel):
 		)
 		mainSizer.Add(self.apiKeyEdit, 0, wx.EXPAND | wx.ALL, 5)
 
+		self.geminiHelpButton = wx.Button(self, label="Get Gemini API key")
+		mainSizer.Add(self.geminiHelpButton, 0, wx.ALL, 5)
+
 		# Timeout
 		timeoutLabel = wx.StaticText(self, label="Timeout (seconds):")
 		mainSizer.Add(timeoutLabel, 0, wx.ALL, 5)
@@ -104,6 +109,7 @@ class AIChatSettingsPanel(settingsDialogs.SettingsPanel):
 		self.modelModeChoice.Bind(wx.EVT_CHOICE, self.onModelModeChanged)
 		self.refreshModelsButton.Bind(wx.EVT_BUTTON, self.onRefreshModels)
 		self.modelCombo.Bind(wx.EVT_COMBOBOX, self.onModelComboSelected)
+		self.geminiHelpButton.Bind(wx.EVT_BUTTON, self.onGeminiHelp)
 
 		self.loadAvailableModels()
 		self.onModelModeChanged(None)
@@ -135,6 +141,10 @@ class AIChatSettingsPanel(settingsDialogs.SettingsPanel):
 		self.modelCombo.Enable(isCustom)
 		self.manualModelEdit.Enable(isCustom)
 		self.refreshModelsButton.Enable(isCustom)
+
+	def onGeminiHelp(self, evt):
+		ui.message("Opening Gemini API key page")
+		webbrowser.open("https://aistudio.google.com/app/apikey")
 
 	def onSave(self):
 		setProvider(self.providerChoice.GetStringSelection())
