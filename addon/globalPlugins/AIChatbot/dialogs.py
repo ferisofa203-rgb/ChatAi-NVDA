@@ -28,11 +28,9 @@ class ChatDialog(wx.Dialog):
     def buildUI(self):
         mainSizer = wx.BoxSizer(wx.VERTICAL)
 
-        # Conversation label
         historyLabel = wx.StaticText(self, label="Chat history:")
         mainSizer.Add(historyLabel, 0, wx.LEFT | wx.RIGHT | wx.TOP, 5)
 
-        # Conversation area
         self.historyBox = wx.TextCtrl(
             self,
             style=wx.TE_MULTILINE | wx.TE_READONLY | wx.TE_RICH2
@@ -40,11 +38,9 @@ class ChatDialog(wx.Dialog):
         self.historyBox.SetName("Chat history")
         mainSizer.Add(self.historyBox, 1, wx.EXPAND | wx.ALL, 5)
 
-        # Input label
         inputLabel = wx.StaticText(self, label="Your message:")
         mainSizer.Add(inputLabel, 0, wx.LEFT | wx.RIGHT | wx.TOP, 5)
 
-        # Input box
         self.inputBox = wx.TextCtrl(
             self,
             style=wx.TE_MULTILINE
@@ -52,7 +48,6 @@ class ChatDialog(wx.Dialog):
         self.inputBox.SetName("Your message")
         mainSizer.Add(self.inputBox, 0, wx.EXPAND | wx.ALL, 5)
 
-        # Buttons
         buttonSizer = wx.BoxSizer(wx.HORIZONTAL)
 
         self.sendButton = wx.Button(self, label="Send")
@@ -69,7 +64,6 @@ class ChatDialog(wx.Dialog):
 
         self.SetSizer(mainSizer)
 
-        # Bind events
         self.sendButton.Bind(wx.EVT_BUTTON, self.onSend)
         self.copyButton.Bind(wx.EVT_BUTTON, self.onCopy)
         self.clearButton.Bind(wx.EVT_BUTTON, self.onClear)
@@ -81,20 +75,24 @@ class ChatDialog(wx.Dialog):
             wx.CallAfter(self.inputBox.SetFocus)
         event.Skip()
 
+    # =========================
+    # KEY HANDLER (FIX ENTER)
+    # =========================
     def onInputKeyDown(self, event):
         keyCode = event.GetKeyCode()
 
         if keyCode in (wx.WXK_RETURN, wx.WXK_NUMPAD_ENTER):
             if event.ShiftDown():
-                self.inputBox.WriteText("\n")
-            else:
-                self.onSend(None)
+                event.Skip()
+                return
+
+            self.onSend(None)
             return
 
         event.Skip()
 
     # =========================
-    # Core Logic
+    # CORE LOGIC
     # =========================
 
     def onSend(self, event):
@@ -112,7 +110,7 @@ class ChatDialog(wx.Dialog):
             "content": text
         })
 
-        self.appendToHistory("You: " + text)
+        self.appendToHistory("You", text)
         self.inputBox.SetValue("")
 
         self.isBusy = True
@@ -140,15 +138,12 @@ class ChatDialog(wx.Dialog):
         })
 
         self.lastResponse = reply
-
-        self.appendToHistory("Assistant: " + reply)
+        self.appendToHistory("Asisten", reply)
 
         self.isBusy = False
-        self.sendButton.Enable()
+        self.sendButton.Enable(True)
 
         self.historyBox.SetFocus()
-        self.historyBox.SetInsertionPointEnd()
-        self.historyBox.ShowPosition(self.historyBox.GetLastPosition())
 
     def onError(self, message):
         ui.message("Error: " + message)
@@ -158,19 +153,31 @@ class ChatDialog(wx.Dialog):
         self.inputBox.SetFocus()
 
     # =========================
-    # UI Helpers
+    # HISTORY FIX (NO BLANK LINE)
     # =========================
+    def appendToHistory(self, speaker, text):
+        text = text.replace("\r\n", "\n").replace("\r", "\n")
 
-    def appendToHistory(self, text):
-        current = self.historyBox.GetValue()
+        # HAPUS SEMUA LINE KOSONG
+        lines = [line for line in text.split("\n") if line.strip() != ""]
+        cleanText = "\n".join(lines).strip()
+
+        entry = "%s: %s" % (speaker, cleanText)
+
+        current = self.historyBox.GetValue().replace("\r\n", "\n").replace("\r", "\n").rstrip("\n")
+
         if current:
-            newText = current + "\n" + text
+            newText = current + "\n" + entry
         else:
-            newText = text
+            newText = entry
 
         self.historyBox.SetValue(newText)
         self.historyBox.SetInsertionPointEnd()
         self.historyBox.ShowPosition(self.historyBox.GetLastPosition())
+
+    # =========================
+    # UI ACTIONS
+    # =========================
 
     def onCopy(self, event):
         if not self.lastResponse:
