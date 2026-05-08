@@ -1,0 +1,11 @@
+{
+  "app": "Saham Aksesibel",
+  "version": "0.1.1",
+  "file_name": "SahamAksesibelSetup-0.1.1.exe",
+  "download_url": "https://www.dropbox.com/scl/fi/912vepxf9jh6txkawpnpk/SahamAksesibel.exe?rlkey=aeyc4xr32l11muv7m1oihb04d&st=cr5j94za&dl=1",
+  "sha256": "sha256:ISI_SHA256_INSTALLER_DI_SINI",
+  "mandatory": false,
+  "auto_download": true,
+  "release_notes_id": "Pembaruan aplikasi. Ringkasan perubahan ditulis di sini.",
+  "release_notes_en": "App update. Write the change summary here."
+}
