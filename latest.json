@@ -1,11 +1,11 @@
 {
   "app": "Saham Aksesibel",
-  "version": "0.1.1",
+  "version": "0.1.0",
   "file_name": "SahamAksesibel.exe",
-  "download_url": "https://www.dropbox.com/scl/fi/912vepxf9jh6txkawpnpk/SahamAksesibel.exe?rlkey=aeyc4xr32l11muv7m1oihb04d&st=cr5j94za&dl=1",
-  "sha256": "sha256:835e0cf1482bdbb5e57da04f1d687a526f816d8d858bee81e20535ab4dccd638",
+  "download_url": "https://www.dropbox.com/scl/fi/912vepxf9jh6txkawpnpk/SahamAksesibel.exe?rlkey=aeyc4xr32l11muv7m1oihb04d&st=q0k8rbtt&dl=1",
+  "sha256": "sha256:3d75a8d2beba91138165469d148b76b4258ff1f047d71040229cabb78605d106",
   "mandatory": false,
   "auto_download": true,
-  "release_notes_id": "Ringkasan perubahan.",
-  "release_notes_en": "Change summary."
+  "release_notes_id": "Pembaruan Saham Aksesibel.",
+  "release_notes_en": "Saham Aksesibel update."
 }
