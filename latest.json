@@ -1,11 +1,11 @@
 {
   "app": "Saham Aksesibel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "file_name": "SahamAksesibel.exe",
   "download_url": "https://www.dropbox.com/scl/fi/912vepxf9jh6txkawpnpk/SahamAksesibel.exe?rlkey=aeyc4xr32l11muv7m1oihb04d&st=q0k8rbtt&dl=1",
-  "sha256": "sha256:3d75a8d2beba91138165469d148b76b4258ff1f047d71040229cabb78605d106",
+  "sha256": "sha256:1bd2fa8333681bb1e8ca1cba3cf8cc6a08d19d63250b010ca6255b7f92ccf09d",
   "mandatory": false,
   "auto_download": true,
-  "release_notes_id": "Pembaruan Saham Aksesibel.",
-  "release_notes_en": "Saham Aksesibel update."
+  "release_notes_id": "Pembaruan Saham Aksesibel 0.1.1. - Menambahkan kategori Nasdaq 100 untuk market United States. - Price trend analysis sekarang mendukung semua saham di watchlist, saham terpilih, dan pencarian saham internet. - Historical price sekarang mendukung semua saham di watchlist, saham terpilih, dan pencarian saham internet. - Dialog pencarian menjalankan aksi utama sesuai menu, misalnya Enter pada pencarian trend langsung menampilkan trend. - Hasil kandidat, trend, histori, dan dividen dapat membuka aksi saham serta menambahkan saham ke watchlist. - Memperbaiki teks Daily summary dan Dividend info agar mengikuti bahasa aplikasi. - Menambahkan sound untuk startup, loading, sukses, notice, cancel, error, dan aksi menu dengan volume startup lebih lembut. - Memperbaiki fokus agar aplikasi tidak otomatis kembali ke menu lain saat user tidak memintanya. - Memperbaiki dialog Tambah saham: Enter membaca detail, sedangkan tombol yang tersedia hanya Tambah ke watchlist. - Menambahkan menu Tentang aplikasi berisi fitur, pembuat, kontak, sumber data, disclaimer, dan catatan rilis. - Cek pembaruan sekarang tetap membacakan apa yang baru ketika aplikasi sudah versi terbaru.",
+  "release_notes_en": "Saham Aksesibel 0.1.1 update. - Added a Nasdaq 100 category for the United States market. - Price trend analysis now supports all watchlist stocks, the selected watchlist stock, and internet stock search. - Historical price now supports all watchlist stocks, the selected watchlist stock, and internet stock search. - Search dialogs now run the active menu action, so Enter in trend search shows trend directly. - Candidate, trend, historical, and dividend results can open stock actions and add stocks to the watchlist. - Fixed Daily summary and Dividend info text so they follow the selected app language. - Added sounds for startup, loading, success, notice, cancel, error, and menu actions with a softer startup volume. - Improved focus behavior so the app does not automatically jump to another menu unless the user chooses it. - Fixed the Add stock dialog: Enter reads details, and the only action button there is Add to watchlist. - Added an About app menu with features, creator, contact, data sources, disclaimer, and release notes. - Check for updates now still reads what's new when the app is already up to date."
 }
