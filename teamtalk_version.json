@@ -3,9 +3,7 @@
     "release_date": "2026-09-01",
     "title": "TeamTalk Music Player v2.1.7.1",
     "changelog": [
-        "adding Spotify player",
-        "fixed some bugs",
-        "adding wadpat donloader"
+        "fix bug admin"
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
