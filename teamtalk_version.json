@@ -1,0 +1,13 @@
+{
+    "version": "2.1.7",
+    "release_date": "2026-09-01",
+    "title": "TeamTalk Music Player v2.1.7",
+    "changelog": [
+        "Initial release with automated cloud update system",
+        "Multi-Server TeamTalk 5 audio streaming engine",
+        "Real-Time 10-Band Graphic Equalizer with live preview",
+        "Direct Dropbox update patch pipeline integration"
+    ],
+    "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
+    "min_required_version": "2.0.0"
+}
