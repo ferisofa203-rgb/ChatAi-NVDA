@@ -1,7 +1,7 @@
 {
-    "version": "2.1.6",
+    "version": "2.1.7",
     "release_date": "2026-09-01",
-    "title": "TeamTalk Music Player v2.1.6",
+    "title": "TeamTalk Music Player v2.1.7",
     "changelog": [
         "Initial release with automated cloud update system",
         "Multi-Server TeamTalk 5 audio streaming engine",
