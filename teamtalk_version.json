@@ -1,7 +1,7 @@
 {
-    "version": "2.1.7.1",
+    "version": "2.1.7.2",
     "release_date": "2026-09-05",
-    "title": "TeamTalk Music Player v2.1.7.1",
+    "title": "TeamTalk Music Player v2.1.7.2",
     "changelog": [
         "Added interactive 2-step 'report' command for users to send bug reports, feature suggestions, or feedback directly to developer via Telegram",
         "Updated command help pages and documentation with the new report feature",
