@@ -1,10 +1,11 @@
 {
     "version": "2.1.7.1",
-    "release_date": "2026-09-02",
+    "release_date": "2026-09-05",
     "title": "TeamTalk Music Player v2.1.7.1",
     "changelog": [
-        "adding  interface for join  channel",
-        "fix admin bug"
+        "Added interactive 2-step 'report' command for users to send bug reports, feature suggestions, or feedback directly to developer via Telegram",
+        "Updated command help pages and documentation with the new report feature",
+        "fix bug bot hide window"
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
