@@ -1,11 +1,14 @@
 {
-    "version": "2.1.7.2",
-    "release_date": "2026-09-09",
-    "title": "TeamTalk Music Player v2.1.7.2",
+    "version": "2.1.8",
+    "release_date": "2026-09-12",
+    "title": "TeamTalk Music Player v2.1.8",
     "changelog": [
-        "Added interactive 2-step 'report' command for users to send bug reports, feature suggestions, or feedback directly to developer via Telegram",
-        "Updated command help pages and documentation with the new report feature",
-        "fix bug bot hide window"
+        "Fixed non-repeating shuffle mode: tracks are never replayed until the queue finishes",
+        "Added automatic volume normalization (EBU R128) via 'nz' command (default: off)",
+        "Optimized 'resette' command using native Win32 Registry APIs without PowerShell",
+        "Added unknown command response for private messages",
+        "Improved asynchronous yt-dlp updater with concurrency protection",
+        "Added convenient command aliases: sp/speed, mode, and shuffle"
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
