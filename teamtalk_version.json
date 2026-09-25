@@ -1,7 +1,7 @@
 {
-    "version": "2.1.9.0",
+    "version": "2.1.9.1",
     "release_date": "2026-09-25",
-    "title": "TeamTalk Music Player v2.1.9.0",
+    "title": "TeamTalk Music Player v2.1.9.1",
     "changelog": [
         "Added Neural Edge TTS song intros with automatic Indonesian and English language detection",
         "Studio broadcast audio mastering for speech announcements with multi-voice selection (Gadis, Ardi, Ava, Chris)",
