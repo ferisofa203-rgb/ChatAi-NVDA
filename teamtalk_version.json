@@ -1,14 +1,16 @@
 {
-    "version": "2.1.8",
-    "release_date": "2026-09-12",
-    "title": "TeamTalk Music Player v2.1.8",
+    "version": "2.1.9",
+    "release_date": "2026-09-25",
+    "title": "TeamTalk Music Player v2.1.9",
     "changelog": [
-        "Fixed non-repeating shuffle mode: tracks are never replayed until the queue finishes",
-        "Added automatic volume normalization (EBU R128) via 'nz' command (default: off)",
-        "Optimized 'resette' command using native Win32 Registry APIs without PowerShell",
-        "Added unknown command response for private messages",
-        "Improved asynchronous yt-dlp updater with concurrency protection",
-        "Added convenient command aliases: sp/speed, mode, and shuffle"
+        "Added Neural Edge TTS song intros with automatic Indonesian and English language detection",
+        "Studio broadcast audio mastering for speech announcements with multi-voice selection (Gadis, Ardi, Ava, Chris)",
+        "Enhanced YouTube direct stream pipeline, updated help menu (h), and refreshed README documentation",
+        "Completely fixed auto-updater reversion bug: bot preserves updated version after restart\"",
+        "Implemented Windows Atomic Rename (.old rotation) to bypass file locks and antivirus restrictions\"",
+        "Modular architecture refactoring (player_core) for improved stability and faster startup\"",
+        "Enhanced yt-dlp background update reliability with active stream concurrency protection\"",
+        "adding  command join [channel name or ID] [optional password] (or move)"
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
