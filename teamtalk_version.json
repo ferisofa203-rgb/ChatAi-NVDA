@@ -1,16 +1,23 @@
 {
-    "version": "2.1.9",
+    "version": "2.1.9.0",
     "release_date": "2026-09-25",
-    "title": "TeamTalk Music Player v2.1.9",
+    "title": "TeamTalk Music Player v2.1.9.0",
     "changelog": [
         "Added Neural Edge TTS song intros with automatic Indonesian and English language detection",
         "Studio broadcast audio mastering for speech announcements with multi-voice selection (Gadis, Ardi, Ava, Chris)",
         "Enhanced YouTube direct stream pipeline, updated help menu (h), and refreshed README documentation",
-        "Completely fixed auto-updater reversion bug: bot preserves updated version after restart\"",
-        "Implemented Windows Atomic Rename (.old rotation) to bypass file locks and antivirus restrictions\"",
-        "Modular architecture refactoring (player_core) for improved stability and faster startup\"",
-        "Enhanced yt-dlp background update reliability with active stream concurrency protection\"",
-        "adding  command join [channel name or ID] [optional password] (or move)"
+        "Completely fixed auto-updater reversion bug: bot preserves updated version after restart",
+        "Implemented Windows Atomic Rename (.old rotation) to bypass file locks and antivirus restrictions",
+        "Modular architecture refactoring (player_core) for improved stability and faster startup",
+        "Enhanced yt-dlp background update reliability with active stream concurrency protection",
+        "new command ,",
+        "join [channel name or ID] [optional password] (or move)",
+        "new command",
+        "rst (or restart)",
+        "[Admin only] Restart TeamTalk Music Player. Automatically reconnects running bots, rejoins previous channels, restores playlist queues, and resumes music/radio playback at the exact position.",
+        "note. If you can't update the bot automatically, please update manually by downloading from this link.",
+        "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
+        "then Extract the zip file and move all into your bot folder, thank you."
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
