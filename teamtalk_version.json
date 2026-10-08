@@ -1,7 +1,7 @@
 {
-    "version": "2.1.9.2",
-    "release_date": "2026-09-30",
-    "title": "TeamTalk Music Player v2.1.9.2",
+    "version": "2.1.9.3",
+    "release_date": "2026-10-09",
+    "title": "TeamTalk Music Player v2.1.9.3",
     "changelog": [
         "New command: 'link' (or 'url') to display and share current playing song link",
         "New command: 'fd [number]' (or 'fd a') to delete tracks or clear favorites list",
