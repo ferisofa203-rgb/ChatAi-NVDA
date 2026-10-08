@@ -3,12 +3,7 @@
     "release_date": "2026-10-09",
     "title": "TeamTalk Music Player v2.1.9.3",
     "changelog": [
-        "New command: 'link' (or 'url') to display and share current playing song link",
-        "New command: 'fd [number]' (or 'fd a') to delete tracks or clear favorites list",
-        "Enhanced 'pf' command: can now be executed without numbers to play favorite songs seamlessly",
-        "Fixed favorite track shuffle getting stuck when pressing 'n' (skip)",
-        "Unified Favorites playback engine with PlaylistManager for consistent 'n', 'b', and 'sh' behavior",
-        "Removed spammy 'Loading...' announcements across all modes (p, pq, pf) for a clean screen-reader experience"
+        "\"maintenance update\""
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
