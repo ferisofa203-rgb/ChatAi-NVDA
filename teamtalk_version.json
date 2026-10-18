@@ -1,10 +1,9 @@
 {
-    "version": "2.1.9.4",
-    "release_date": "2026-10-16",
-    "title": "TeamTalk Music Player v2.1.9.4",
+    "version": "2.1.9.5",
+    "release_date": "2026-10-19",
+    "title": "TeamTalk Music Player v2.1.9.5",
     "changelog": [
-        "New command: 'scc [on/off]' for same-channel command protection (non-admins outside channel are blocked, admins limited to core remote commands)",
-        "Persistent custom status message: 'status [message]' is now automatically saved into server profile config"
+        "fix tts intro"
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
