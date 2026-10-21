@@ -1,9 +1,13 @@
 {
-    "version": "2.1.9.5",
-    "release_date": "2026-10-19",
-    "title": "TeamTalk Music Player v2.1.9.5",
+    "version": "2.2.0",
+    "release_date": "2026-10-22",
+    "title": "TeamTalk Music Player v2.2.0",
     "changelog": [
-        "fix tts intro"
+        "New command: 'au' (or 'autoplay') to toggle real autoplay of similar songs on or off (Default: on). When searching with 'p', the bot plays the top result and automatically loads continuous similar tracks from YouTube Mix instead of the other 9 search results (which are often just different versions of the same song). The bot remembers the last 500 played songs and normalizes titles to automatically skip duplicate versions, live recordings, and lyric videos. Autoplay also continues smoothly when a queue finishes and when using 'n' at the end of a list in mode 3 (Play Queue).",
+        "Microphone Cable Safety Protection: prevents accidental hot-mic leaks. In previous versions, if the virtual audio cable was missing or unconfigured, the bot fell back to the system's default input device (usually the host's real physical microphone) and transmitted it into the channel. Now, the server profile strictly stops with a clear log message if the configured sound input device is not found or empty. Additionally, the bot verifies the music output device once per start, warning in the log if the saved cable is missing so music never accidentally spills through physical speakers.",
+        "New command: 'r' (or 'recent', 'recents') to list and replay recently played songs. Typing 'r' displays the history of the last 20 tracks played, sorted newest first. Typing 'r' followed by a number (for example 'r 2') instantly starts playback of that specific recent song.",
+        "New admin commands: 'ban [nickname or account name]', 'unban [account name]', and 'banlist' for user account moderation. Banning targets the authenticated TeamTalk account, blocking anyone logged in under that account from executing bot commands. Banned users receive 'You are banned from using this bot' in private messages and are completely ignored in channel chat. Users without an account name and bot administrators cannot be banned. The ban list is permanently saved per server profile in servers.json.",
+        "New admin commands: 'block [command]', 'unblock [command]', and 'blocklist' to restrict specific bot commands for non-administrators. Blocking a command automatically blocks all its known aliases (for example, 'block play' also blocks 'p' and 'search'). Administrator commands are already protected and cannot be blocked. The list of blocked commands is permanently saved per server profile in servers.json."
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
