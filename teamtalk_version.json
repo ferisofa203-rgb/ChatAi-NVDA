@@ -1,13 +1,18 @@
 {
     "version": "2.2.0",
-    "release_date": "2026-10-22",
+    "release_date": "2026-10-26",
     "title": "TeamTalk Music Player v2.2.0",
     "changelog": [
-        "New command: 'au' (or 'autoplay') to toggle real autoplay of similar songs on or off (Default: on). When searching with 'p', the bot plays the top result and automatically loads continuous similar tracks from YouTube Mix instead of the other 9 search results (which are often just different versions of the same song). The bot remembers the last 500 played songs and normalizes titles to automatically skip duplicate versions, live recordings, and lyric videos. Autoplay also continues smoothly when a queue finishes and when using 'n' at the end of a list in mode 3 (Play Queue).",
-        "Microphone Cable Safety Protection: prevents accidental hot-mic leaks. In previous versions, if the virtual audio cable was missing or unconfigured, the bot fell back to the system's default input device (usually the host's real physical microphone) and transmitted it into the channel. Now, the server profile strictly stops with a clear log message if the configured sound input device is not found or empty. Additionally, the bot verifies the music output device once per start, warning in the log if the saved cable is missing so music never accidentally spills through physical speakers.",
-        "New command: 'r' (or 'recent', 'recents') to list and replay recently played songs. Typing 'r' displays the history of the last 20 tracks played, sorted newest first. Typing 'r' followed by a number (for example 'r 2') instantly starts playback of that specific recent song.",
-        "New admin commands: 'ban [nickname or account name]', 'unban [account name]', and 'banlist' for user account moderation. Banning targets the authenticated TeamTalk account, blocking anyone logged in under that account from executing bot commands. Banned users receive 'You are banned from using this bot' in private messages and are completely ignored in channel chat. Users without an account name and bot administrators cannot be banned. The ban list is permanently saved per server profile in servers.json.",
-        "New admin commands: 'block [command]', 'unblock [command]', and 'blocklist' to restrict specific bot commands for non-administrators. Blocking a command automatically blocks all its known aliases (for example, 'block play' also blocks 'p' and 'search'). Administrator commands are already protected and cannot be blocked. The list of blocked commands is permanently saved per server profile in servers.json."
+        "Percepatan Ekstraksi & Pemutaran Musik: Perintah 'p', 'n', dan 'b' kini merespons instan berkat paralelisme ekstraksi stream, cache stream aktif, dan prefetching track tetangga di latar belakang.",
+        "Intro TTS Non-Blocking: Pembuatan intro suara tidak lagi menahan musik. Ditambahkan batas anggaran tunggu (tts_wait_ms) serta penyimpanan cache hasil mastering audio di folder downloads/tts_cache.",
+        "Prioritas Klien yt-dlp Cerdas: Otomatis mendahulukan klien mobile berkecepatan tinggi (android, tv_embedded) dengan fallback mulus ke default yt-dlp (Samsung TV & Web) jika terdapat tantangan enkripsi.",
+        "Integrasi Mandiri QuickJS & yt-dlp-ejs: Bundel runtime QuickJS (qjs.exe) dan solver yt-dlp-ejs memungkinkan pemecahan tantangan JavaScript n-sig YouTube secara mandiri tanpa dependensi eksternal.",
+        "Pemulihan Pemutaran Otomatis (Mid-Track Recovery): Jika audio terputus mendadak atau terkena HTTP 403, bot otomatis mengambil stream baru dan melanjutkan lagu dari posisi detik terakhir.",
+        "Arsitektur Konfigurasi Aman: Pola baca-gabung-tulis atomik pada global_settings.json dan servers.json memastikan pengaturan kustom pengguna selalu terlindungi dan tidak pernah terhapus.",
+        "Perintah Baru 'au' (Autoplay): Memutar lagu serupa secara otomatis dan berlanjut dari YouTube Mix.",
+        "Perintah Baru 'r' (Recents): Melihat dan memutar ulang riwayat 20 lagu yang baru saja diputar.",
+        "Proteksi Kabel Suara Virtual: Mencegah kebocoran mikrofon fisik asli host ke dalam channel.",
+        "Perintah Moderasi Admin: Dukungan perintah 'ban', 'unban', 'banlist', serta 'block', 'unblock', 'blocklist'."
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
