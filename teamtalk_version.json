@@ -1,18 +1,15 @@
 {
-    "version": "2.2.0",
+    "version": "2.2.1",
     "release_date": "2026-10-26",
-    "title": "TeamTalk Music Player v2.2.0",
+    "title": "TeamTalk Music Player v2.2.1",
     "changelog": [
-        "Percepatan Ekstraksi & Pemutaran Musik: Perintah 'p', 'n', dan 'b' kini merespons instan berkat paralelisme ekstraksi stream, cache stream aktif, dan prefetching track tetangga di latar belakang.",
-        "Intro TTS Non-Blocking: Pembuatan intro suara tidak lagi menahan musik. Ditambahkan batas anggaran tunggu (tts_wait_ms) serta penyimpanan cache hasil mastering audio di folder downloads/tts_cache.",
-        "Prioritas Klien yt-dlp Cerdas: Otomatis mendahulukan klien mobile berkecepatan tinggi (android, tv_embedded) dengan fallback mulus ke default yt-dlp (Samsung TV & Web) jika terdapat tantangan enkripsi.",
-        "Integrasi Mandiri QuickJS & yt-dlp-ejs: Bundel runtime QuickJS (qjs.exe) dan solver yt-dlp-ejs memungkinkan pemecahan tantangan JavaScript n-sig YouTube secara mandiri tanpa dependensi eksternal.",
-        "Pemulihan Pemutaran Otomatis (Mid-Track Recovery): Jika audio terputus mendadak atau terkena HTTP 403, bot otomatis mengambil stream baru dan melanjutkan lagu dari posisi detik terakhir.",
-        "Arsitektur Konfigurasi Aman: Pola baca-gabung-tulis atomik pada global_settings.json dan servers.json memastikan pengaturan kustom pengguna selalu terlindungi dan tidak pernah terhapus.",
-        "Perintah Baru 'au' (Autoplay): Memutar lagu serupa secara otomatis dan berlanjut dari YouTube Mix.",
-        "Perintah Baru 'r' (Recents): Melihat dan memutar ulang riwayat 20 lagu yang baru saja diputar.",
-        "Proteksi Kabel Suara Virtual: Mencegah kebocoran mikrofon fisik asli host ke dalam channel.",
-        "Perintah Moderasi Admin: Dukungan perintah 'ban', 'unban', 'banlist', serta 'block', 'unblock', 'blocklist'."
+        "2026.10.26",
+        "\"Major Playback Speed Optimization: 'p' (play/search), 'n' (skip), and 'b' (prev) commands respond near-instantly with parallel stream extraction, negative caching, and background adjacent prefetching.\"",
+        "\"Non-Blocking Neural Edge TTS: Song announcements never delay playback. Added 'tts_wait_ms' timeout budget and studio-mastered audio caching in downloads/tts_cache.\"",
+        "\"Intelligent yt-dlp Client Selection: Prioritizes fast stream clients (android, tv_embedded) with seamless automatic fallback to yt-dlp default (Samsung TV, Web) when JS challenges are required.\"",
+        "\"Embedded QuickJS Runtime & yt-dlp-ejs: Bundled qjs.exe and yt-dlp-ejs solver for 100% self-contained offline execution of YouTube JavaScript challenges.\"",
+        "\"Mid-Track Stream Recovery: Automatically recovers and resumes playback from the exact second if a stream gets interrupted or encounters HTTP 403.\"",
+        "\"Config Preserving Architecture: Atomic read-merge-write safety across global_settings.json and servers.json ensuring custom settings are never lost.\""
     ],
     "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
     "min_required_version": "2.0.0"
