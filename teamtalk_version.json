@@ -1,6 +1,6 @@
 {
     "version": "2.2.1",
-    "release_date": "2026-10-26",
+    "release_date": "2026-10-28",
     "title": "TeamTalk Music Player v2.2.1",
     "changelog": [
         "2026.10.26",
@@ -11,6 +11,6 @@
         "\"Mid-Track Stream Recovery: Automatically recovers and resumes playback from the exact second if a stream gets interrupted or encounters HTTP 403.\"",
         "\"Config Preserving Architecture: Atomic read-merge-write safety across global_settings.json and servers.json ensuring custom settings are never lost.\""
     ],
-    "download_url": "https://www.dropbox.com/scl/fi/xvf4p425fce1jphuuq54t/update_patch.zip?rlkey=432bv820r0nhnirmkigy8u101&dl=1",
+    "download_url": "https://www.dropbox.com/scl/fi/9wo05ldyt6j621qi250ot/update_patch.zip?rlkey=pqnm0lr5xa4wfvvzm53mbgan8&dl=0",
     "min_required_version": "2.0.0"
 }
