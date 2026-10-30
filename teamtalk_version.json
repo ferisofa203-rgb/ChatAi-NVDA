@@ -1,16 +1,10 @@
 {
-    "version": "2.2.1",
-    "release_date": "2026-10-28",
-    "title": "TeamTalk Music Player v2.2.1",
+    "version": "2.2.2",
+    "release_date": "2026-10-30",
+    "title": "TeamTalk Music Player v2.2.2",
     "changelog": [
-        "2026.10.26",
-        "\"Major Playback Speed Optimization: 'p' (play/search), 'n' (skip), and 'b' (prev) commands respond near-instantly with parallel stream extraction, negative caching, and background adjacent prefetching.\"",
-        "\"Non-Blocking Neural Edge TTS: Song announcements never delay playback. Added 'tts_wait_ms' timeout budget and studio-mastered audio caching in downloads/tts_cache.\"",
-        "\"Intelligent yt-dlp Client Selection: Prioritizes fast stream clients (android, tv_embedded) with seamless automatic fallback to yt-dlp default (Samsung TV, Web) when JS challenges are required.\"",
-        "\"Embedded QuickJS Runtime & yt-dlp-ejs: Bundled qjs.exe and yt-dlp-ejs solver for 100% self-contained offline execution of YouTube JavaScript challenges.\"",
-        "\"Mid-Track Stream Recovery: Automatically recovers and resumes playback from the exact second if a stream gets interrupted or encounters HTTP 403.\"",
-        "\"Config Preserving Architecture: Atomic read-merge-write safety across global_settings.json and servers.json ensuring custom settings are never lost.\""
+        "TeamTalk Music Player v2.2.2 update"
     ],
-    "download_url": "https://www.dropbox.com/scl/fi/9wo05ldyt6j621qi250ot/update_patch.zip?rlkey=pqnm0lr5xa4wfvvzm53mbgan8&dl=1",
+    "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.2/update_patch.zip",
     "min_required_version": "2.0.0"
 }
