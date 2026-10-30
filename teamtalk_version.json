@@ -1,10 +1,27 @@
 {
-    "version": "2.2.2",
+    "version": "2.2.3",
     "release_date": "2026-10-30",
-    "title": "TeamTalk Music Player v2.2.2",
+    "title": "TeamTalk Music Player v2.2.3",
     "changelog": [
-        "TeamTalk Music Player v2.2.2 update"
+        "TeamTalk Music Player v2.2.3 release",
+        "New feature: ytAccess Ticket & Bug Reporting System. Directly integrated with ytAccess server, replacing the obsolete Telegram relay. Two-way communication between users and developer via the ytAccess Admin desktop application with automatic background polling every 2 minutes.",
+        "New command: 'report [id]|[message]' to directly reply to developer inquiries on an active ticket. Typing 'report' with active tickets prompts an interactive menu to either reply or submit a new report.",
+        "New feature: Offline report mailbox. Developer replies sent while the user is offline are safely queued and automatically delivered via Private Message when they log in to the server.",
+        "New AI Assistant: Brand new conversational AI assistant powered by OpenAI-compatible providers (9Router, Gemini, Groq, OpenRouter, NVIDIA) with multi-round tool execution (up to 8 rounds). Features 30 autonomous tools (15 non-admin tools for media control, playback state, music trivia, user/channel inspection, live system time, math calculations, currency conversions, reminders, and safe private messaging, plus 15 administrator tools for server moderation, channel management, user accounts, and scheduled tasks).",
+        "New AI capabilities: Multi-backend live web search (DuckDuckGo Text/News/HTML, Wikipedia REST API, optional Tavily) and safe webpage reader with SSRF protection, allowing the bot to research real-time information, songs, lyrics, and news directly.",
+        "New AI feature: Persistent background task scheduler ('ai_schedules.json') for automatic channel and private reminders, as well as scheduled auto-unbans.",
+        "New AI feature: Conversational chime-in ('ai auto') and adjustable intensity via 'ai chime [1-3]' (1: Quiet, 2: Normal, 3: Active). Includes Smart Silence ('NO_REPLY') where the bot stays 100% silent when asked to be quiet or when conversations do not require bot intervention.",
+        "New settings: All AI settings can be configured in Global Settings (accessible 5-tab dialog with screen reader support).",
+        "New command: 'pm' (or 'tell') for private messaging and unified offline mailbox. If the recipient is online, the message is sent directly. If the recipient is offline, the message is automatically queued in mailbox.json and delivered the moment they log in to the server. Features flexible username/nickname matching, delivery confirmation receipt sent to the sender when online, quota limit of 2 pending messages per sender, and 7-day automatic message expiration.",
+        "New command: 'rc' (channel creation wizard) to interactively create temporary or permanent channels via Private Message (PM). Step-by-step chat prompts guide you to set channel name, topic, operator password, permission flags (solo transmit, classroom, operator recvonly, no vox), and audio codec (defaults to Opus Music Stereo 48kHz, 64 kbps, 1000-user capacity).",
+        "New command: 'ru' (or 'reg', 'register') to register a new user account directly from chat (Private Message only) with password strength validation and IP rate limiting (configurable via Server Dialog).",
+        "New server & community moderation commands: 'dc' (delete channel), 'du' (delete user account), 'lc' (list channels and owners), 'oc' (check channel owner), 'so' (set channel owner), 'to' (transfer channel ownership), 'kc' (kick user), 'bn' (ban user), 'ubn' (unban user or IP), 'lb' (list bans), 'lu' (list online users), and 'mc' (move user or 'mc all|target' to migrate all channel occupants).",
+        "New server protection & anti-abuse: Configurable join flood limits and abuse tracking window in Server Dialog, automatic dirty profile detection (nicknames and status messages) backed by 1,700 filter words with 3-stage escalation (warning PM -> kick -> temporary ban), and scheduled auto-unban.",
+        "Fixed: 'status [message]' is now unified as the single persistent status command saved in servers.json while preserving bot gender settings ('cg'). Removed redundant 'cs' command.",
+        "Fixed: Default channel creation capacity increased to 1000 users, eliminating the server error 'Maximum number of users in channel exceeded'. Added automatic channel password memory for seamless autojoin and 'move_all' room migration.",
+        "Fixed: Edge TTS race conditions and audio mastering, ensuring speech announcements never cut off and temporary files are cleaned up atomically via '.tmp.mp3'.",
+        "Enhanced: Screen reader accessibility (NVDA/JAWS) across all help menus by removing confusing '< >' brackets, adding natural conversational voice feedback, and accessible 5-tab Global Settings dialog with keyboard shortcuts."
     ],
-    "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.2/update_patch.zip",
+    "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.3/update_patch.zip",
     "min_required_version": "2.0.0"
 }
