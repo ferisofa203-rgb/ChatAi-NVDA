@@ -6,10 +6,12 @@
         "TeamTalk Music Player v2.2.3.1 maintenance update",
         "Fixed: 'lu' (list users) command now reliably retrieves online users using the official SDK 'getServerUsers()' API, resolving the ''TeamTalk' object has no attribute 'getUsers'' error.",
         "Enhanced: Server-wide message interception in Server Dialog ('Server-wide message interception (listen to all channels)'). Requires the bot to run with a TeamTalk Administrator account. The bot monitors text messages across all server channels exclusively for bad words moderation, while user-to-user private messages remain 100% private and unintercepted to protect user confidentiality. You can add prohibited words in file filtermessages.txt.",
-        "\"Fixed: Nested installation repair for short 8.3 Windows paths ('_INTER~1'). If an update was unpacked into '_internal\\_internal', the engine automatically detects and relocates files to their correct directories and migrates user data cleanly without data loss.\"",
-        "\"Enhanced: YouTube autoplay fallback. If the daily updated Python yt-dlp module encounters an extractor error before a full restart, the engine automatically falls back to yt-dlp.exe CLI to keep continuous autoplay and mixes playing seamlessly.\"",
-        "\"Enhanced: Audio cable output tracking. When a Virtual Audio Cable (VAC) is selected as sound input, music playback automatically routes through the same cable line if no explicit output device is saved, preventing accidental sound leakage through physical PC speakers.\""
+        "Fixed: Nested installation repair for short 8.3 Windows paths ('_INTER~1'). If an update was unpacked into '_internal\\_internal', the engine automatically detects and relocates files to their correct directories and migrates user data cleanly without data loss.",
+        "Enhanced: YouTube autoplay fallback. If the daily updated Python yt-dlp module encounters an extractor error before a full restart, the engine automatically falls back to yt-dlp.exe CLI to keep continuous autoplay and mixes playing seamlessly.",
+        "Enhanced: Audio cable output tracking. When a Virtual Audio Cable (VAC) is selected as sound input, music playback automatically routes through the same cable line if no explicit output device is saved, preventing accidental sound leakage through physical PC speakers."
     ],
     "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.3.1/update_patch.zip",
-    "min_required_version": "2.0.0"
+    "min_required_version": "2.0.0",
+    "download_url_linux": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.3.1/TeamTalk-Music-Player-Linux-x86_64-v2.2.3.1.tar.gz",
+    "sha256_linux": "cfcf707bf01b0f1c279e914b295c588ef0e8767d53ff86703b1f6ebbfd5c2e73"
 }
