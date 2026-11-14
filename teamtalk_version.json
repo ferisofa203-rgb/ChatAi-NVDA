@@ -1,17 +1,27 @@
 {
-    "version": "2.2.3.1",
-    "release_date": "2026-11-01",
-    "title": "TeamTalk Music Player v2.2.3.1",
+    "version": "2.2.4",
+    "release_date": "2026-11-14",
+    "title": "TeamTalk Music Player v2.2.4",
     "changelog": [
-        "TeamTalk Music Player v2.2.3.1 maintenance update",
-        "Fixed: 'lu' (list users) command now reliably retrieves online users using the official SDK 'getServerUsers()' API, resolving the ''TeamTalk' object has no attribute 'getUsers'' error.",
-        "Enhanced: Server-wide message interception in Server Dialog ('Server-wide message interception (listen to all channels)'). Requires the bot to run with a TeamTalk Administrator account. The bot monitors text messages across all server channels exclusively for bad words moderation, while user-to-user private messages remain 100% private and unintercepted to protect user confidentiality. You can add prohibited words in file filtermessages.txt.",
-        "Fixed: Nested installation repair for short 8.3 Windows paths ('_INTER~1'). If an update was unpacked into '_internal\\_internal', the engine automatically detects and relocates files to their correct directories and migrates user data cleanly without data loss.",
-        "Enhanced: YouTube autoplay fallback. If the daily updated Python yt-dlp module encounters an extractor error before a full restart, the engine automatically falls back to yt-dlp.exe CLI to keep continuous autoplay and mixes playing seamlessly.",
-        "Enhanced: Audio cable output tracking. When a Virtual Audio Cable (VAC) is selected as sound input, music playback automatically routes through the same cable line if no explicit output device is saved, preventing accidental sound leakage through physical PC speakers."
+        "TeamTalk Music Player v2.2.4 release",
+        "New: TeamTalk Music Player now officially supports 24/7 background operation on Linux VPS and servers! Simply download and run setup.sh (curl -sSL https://raw.githubusercontent.com/ferisofa203-rgb/teamtalk-player/main/setup.sh -o setup.sh && chmod +x setup.sh && sudo ./setup.sh). The automated terminal script handles runtime dependencies, isolated PulseAudio sinks, systemd services, automated Let's Encrypt SSL/TLS certificates, and multi-bot lifecycle.",
+        "New feature (Linux VPS): Screen-Reader Accessible Web Dashboard & Multi-Bot Portal Hub. Manage, monitor, and configure all bot instances from a unified web portal (port 18787 /portal) with SSO token navigation. The dashboard delivers 100% feature parity with the Windows GUI across 7 NVDA/JAWS accessible tabs, real-time playback state, power controls, and shared master global settings architecture.",
+        "New feature (Linux VPS): Remote YouTube Cookies Management. Update YouTube cookies remotely without VPS shell access via the Web Dashboard (/cookies page) or a secure private message session ('cookie set' PM command, 3-minute window, in-memory assembly, atomic installation) with automated access health checks and admin alerts.",
+        "Enhanced: Upgraded core audio playback engine on Windows from legacy mpv-1.dll (v0.33.0, 2021) to modern mpv-2.dll (mpv v0.42.0 with FFmpeg 7). This delivers state-of-the-art demuxing, modern TLS/HTTPS streaming stability, and seamless compatibility with the local YouTube Bridge daemon. Legacy mpv-1.dll files are automatically cleaned up on startup and during updates.",
+        "Enhanced: YouTube extraction engine fully unified between Windows and Linux VPS. The standalone yt-dlp.exe binary has been removed from the Windows package. The primary audio extraction engine is now exclusively the local YouTube Bridge daemon, delivering sub-second playback and fast MP3/MP4 downloads ('dl' and 'dlv'). The Python yt-dlp module (bot_modules/yt_dlp) remains as a silent fallback. This reduces release package size by approximately 23.5 MB and eliminates the separate binary updater.",
+        "Enhanced: Automatic cleanup of legacy yt-dlp binary files on startup and during updates. Residual yt-dlp.exe, yt-dlp$.exe, and yt-dlp*.old files in the bot folder and its _internal directory are automatically removed without manual intervention.",
+        "Enhanced: Seamless stream recovery. If a YouTube Bridge stream is interrupted or encounters network throttling mid-track, the engine automatically hands the stream over to yt-dlp to finish playing the exact remaining seconds without any gap or restarting from the beginning.",
+        "Fixed: Zero-orphan process guarantee for YouTube Bridge on Windows. The youtube_bridge.exe daemon is bound to the Windows Kernel Job Object and continuously monitors parent heartbeat, ensuring it immediately and cleanly terminates whenever the bot exits or is stopped from Task Manager.",
+        "New feature: Voice Assistant with Wake Word detection. Say 'Hi Bot' or 'Hi [bot name]' in a TeamTalk channel to activate voice listening. Speak music commands ('play Denny Caknan', 'stop', 'next', 'volume 80') or converse naturally with the AI assistant. Audio is processed entirely in RAM with zero disk persistence, smooth music volume ducking, and echo guard protection.",
+        "New commands: Voice Assistant administration and privacy controls. Administrators can control voice features via 'voice on', 'voice off', 'voice status', 'voice toggle', and change wake words via 'voice phrase [preset]' ('Hi Bot', 'Hey Bot', 'Hey Computer', 'Hi Assistant', 'Hi Player'). Users can control their own privacy with 'voice optout' and 'voice optin'. Wake phrase settings can also be configured in the Server Dialog.",
+        "New commands: 'ao [on/off]' (prefer album audio tracks over music videos, default: on) and 'nc [on/off]' (skip clean and edited song versions, default: on). Both can be toggled in chat and configured permanently per server profile in the Server Dialog. Thanks to Ali for making this.",
+        "Enhanced: YouTube Music Explicit badge detection for 'nc'. Before playing search results or autoplay tracks, the bot queries YouTube Music via YouTube Bridge to verify and prioritize official Explicit album tracks over censored radio edits, edited versions, or fan lyric uploads.",
+        "Enhanced: Intelligent Autoplay. Autoplay refills are now seeded directly from the user's anchor song (the chosen 'p' or queue track) and restricted to the top 15 Mix tracks, ensuring continuous playback stays closely aligned with the requested artist and genre. Autoplay also continues smoothly after a queue finishes.",
+        "Enhanced: Conversational AI prompt optimized for screen-reader communities (NVDA/JAWS). Refined conversational banter, natural handling of fast chat patterns (laughter, keyboard mashing, voice dictation typos without unsolicited corrections), and prefix prompt caching for faster responses and lower token consumption.",
+        "Fixed: 'lc' (list channels) command now reliably retrieves channels and channel owners using the official SDK 'getServerChannels()' API.",
+        "Enhanced: 'changes' command now displays the latest release version by default to prevent chat flooding. Type 'changes all' to view the complete version history.",
+        "Enhanced (Linux VPS): Seamless In-Chat Updates ('update now'). Administrators can now install updates directly from chat on Linux VPS via non-interactive sudo execution of update.sh. The updater safely coordinates multi-bot instances (teamtalk-player@*.service), atomically replaces program files, and restarts all active bot instances and background services seamlessly."
     ],
-    "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.3.1/update_patch.zip",
-    "min_required_version": "2.0.0",
-    "download_url_linux": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.3.1/TeamTalk-Music-Player-Linux-x86_64-v2.2.3.1.tar.gz",
-    "sha256_linux": "cfcf707bf01b0f1c279e914b295c588ef0e8767d53ff86703b1f6ebbfd5c2e73"
+    "download_url": "https://github.com/ferisofa203-rgb/teamtalk-player/releases/download/v2.2.4/update_patch.zip",
+    "min_required_version": "2.0.0"
 }
